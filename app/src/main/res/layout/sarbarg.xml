@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border1"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:background="#7986CB"
+                    android:text="سربرگ"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/datelogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_date_range_36pt_2x" />
+
+                    <TextView
+                        android:id="@+id/datetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp" />
+
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:text="تاریخ" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+
+                        android:layout_width="0dp"
+                        android:layout_weight=".1"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressformType"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="40dp" />
+
+
+                    </RelativeLayout>
+
+                    <Spinner
+                        android:id="@+id/formtype"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:textSize="14dp"
+
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+
+                        android:text="نوع فرم" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressperson"
+                            android:layout_width="40dp"
+
+                            android:layout_height="40dp" />
+
+                        <Button
+                            android:id="@+id/closeperson"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_close_black_16dp_1x" />
+                    </RelativeLayout>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/person"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:dropDownHeight="wrap_content"
+                        android:dropDownWidth="wrap_content"
+                        android:lines="2"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="شخص" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressstock"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <Button
+                            android:id="@+id/closestock"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/ic_close_black_16dp_1x" />
+                    </RelativeLayout>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/stock"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="انبار" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mainLayout">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border1"
+                    android:orientation="vertical"
+                    android:paddingBottom="30dp">
+
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerHorizontal="true"
+                        android:background="#7986CB"
+                        android:text="جزئیات"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp">
+
+                            <ProgressBar
+                                android:id="@+id/progressgood"
+                                android:layout_width="40dp"
+
+                                android:layout_height="40dp" />
+
+                            <Button
+                                android:id="@+id/closegood"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/ic_close_black_16dp_1x" />
+                        </RelativeLayout>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/good"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".8"
+                            android:textSize="14dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.2"
+
+                            android:text="کالا" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight=".2"
+                            android:inputType="number" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+
+                            android:text="تعداد" />
+
+                        <RelativeLayout
+
+
+                            android:layout_width="0dp"
+                            android:layout_weight=".6"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="10dp"
+                           >
+
+                            <Spinner
+                                android:id="@+id/unitspin"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+
+                                />
+                            <ProgressBar
+                                android:id="@+id/progresspin"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+
+                            android:text="واحد" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/parentofbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnadd"
+
+                            android:layout_width="180dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#7986CB"
+                            android:text="اضافه"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/unit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".33"
+                            android:text="واحد" />
+
+                        <TextView
+                            android:id="@+id/number1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".33"
+                            android:text="تعداد" />
+
+                        <TextView
+                            android:id="@+id/product"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".33"
+                            android:text="نام کالا" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detail"
+                        android:orientation="vertical"
+
+
+                        >
+
+                        <ListView
+                            android:id="@+id/listofItems"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                        </ListView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
